@@ -24,5 +24,15 @@ describe UrlNormalization do
       @user.url = "https://example.com"
       @user.url.should == "https://example.com"
     end
+
+    it "should not assign the http if empty" do
+      @user.url = ""
+      @user.url.should == ""
+    end
+
+    it "should not assign the http if nil" do
+      @user.url = nil
+      @user.url.should be_nil
+    end
   end
 end
