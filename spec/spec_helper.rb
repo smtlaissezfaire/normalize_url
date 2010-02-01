@@ -1,5 +1,5 @@
 require "rubygems"
-require "activerecord"
+require "active_record"
 require File.expand_path(File.dirname(__FILE__) + "/../lib/url_normalization")
 require File.expand_path(File.dirname(__FILE__) + "/../init")
 
