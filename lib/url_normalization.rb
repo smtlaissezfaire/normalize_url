@@ -3,8 +3,8 @@ module UrlNormalization
     define_method "#{field_name}=" do |val|
       unless val.blank?
         val.strip!
-        val = "http://#{val}" unless (val =~ /^http/)
         val.downcase!
+        val = "http://#{val}" unless (val =~ /^http/)
       end
 
       super(val)

@@ -49,5 +49,10 @@ describe UrlNormalization do
       @user.url = "GITHUB.com"
       @user.url.should == "http://github.com"
     end
+
+    it "should not add http twice if previously capitalized" do
+      @user.url = "HTTP://eastmedia.com"
+      @user.url.should == "http://eastmedia.com"
+    end
   end
 end
