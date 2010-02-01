@@ -44,5 +44,10 @@ describe UrlNormalization do
       @user.url = "     foobar.com    "
       @user.url.should == "http://foobar.com"
     end
+
+    it "should downcase a string" do
+      @user.url = "GITHUB.com"
+      @user.url.should == "http://github.com"
+    end
   end
 end
