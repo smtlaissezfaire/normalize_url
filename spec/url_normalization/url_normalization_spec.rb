@@ -45,14 +45,14 @@ describe UrlNormalization do
       @user.url.should == "http://foobar.com"
     end
 
-    it "should downcase a string" do
+    it "should NOT downcase a string" do
       @user.url = "GITHUB.com"
-      @user.url.should == "http://github.com"
+      @user.url.should == "http://GITHUB.com"
     end
 
     it "should not add http twice if previously capitalized" do
       @user.url = "HTTP://eastmedia.com"
-      @user.url.should == "http://eastmedia.com"
+      @user.url.should == "HTTP://eastmedia.com"
     end
   end
 end
